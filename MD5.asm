@@ -169,9 +169,7 @@ mov edi,00h
 mov ebp,00h 
 ;mov esp,00h 
 ;*************************************************************************  *main*  ************************************************************************************************* 
-
-
-mov ecx, 0     
+   
 loop1:        
         call clrscr
         call crlf
@@ -228,7 +226,6 @@ mov edx, offset username[0]
 mov ecx, sizeof username
 call readstring 
 ;call writestring
-
 clearedx
 
 
@@ -257,10 +254,9 @@ je match
 jmp unmatch
 
 match:
-
-mov esi,00h
-mov cx, lengthof pass1_r -1
-mov edx, offset pass1_r
+     mov esi,00h
+     mov cx, lengthof pass1_r -1
+     mov edx, offset pass1_r
 
                                                    ;change to small letter
 again:
@@ -283,8 +279,6 @@ again:
 encryp:
 
     call md555 
-
-
 ;------------------------------------------------------------------------------------REMOVEEEEEEEEEEEEEEEEEEE
 
     mov edx, offset hashmsg
@@ -297,8 +291,7 @@ encryp:
 
 ;------------------------------------------------------------------------------------REMOVEEEEEEEEEEEEEEEEEEE
 
-                              ;if match then call encryption
- 
+                              ;if match then call encryption 
     call crlf 
     call crlf 
     mov edx, offset regsuccess
@@ -315,8 +308,6 @@ encryp:
     clearecx
     clearedx
     jmp endregs
-   
-
 
 
 unmatch:
@@ -435,7 +426,6 @@ endlogin:
 jmp loop1
 
 
-
  ;|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
  out_:
@@ -443,7 +433,7 @@ jmp loop1
 main endp
  
 
-;==============================================================       md555        =================================================================================
+;==============================================================       md555 module       =================================================================================
 md555 proc
 push ebp
 mov ebp, esp  
@@ -482,8 +472,8 @@ endfor1:
 
             clearecx
 
-            mov esi, offset pass1_r   ;&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-            lea edi, [strbyte]        ;&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+            mov esi, offset pass1_r  
+            lea edi, [strbyte]      
 For2:
             cmp ecx, lengthof pass1_r
             jae endloop2           
@@ -624,7 +614,7 @@ forendmd5_1:
         
         
        clearecx
-       lea esi, pass3_hex_str             ;compare user password and password hash  .........................not yet compare 
+       lea esi, pass3_hex_str             ;compare user password and password hash  
         movZX ebx, countpass
         cmp ebx, 2
         jne passnext
@@ -650,10 +640,8 @@ md555 endp
 ;-------------------------------------------------------------------------------------------------------------------------------------
 
 
-;=============================================================================================================================== mainloop module
+;====================================================   mainloop module    ===================================================================
 mainloop proc
-
-
 
 Mov eax, A_
 Mov atemp, eax
@@ -802,14 +790,13 @@ mainloop endp
 ;----------------------------------------------------------------------------------------------------------------------------------------------
 
 
-;============================================================================================================================ changehex module
+;========================================================= changehex module  =================================================================
 changehex proc
 push ebp
 mov ebp, esp
 pushad
 mov eax, [ebp+8]                     ;a  = b  = dtemp,ctemp,btemp,atemp
 mov x_ , eax
-
 
                                     ;---strr1.insert(0, 1, str16[b % 16]);
                                     ;---strr += str1;
