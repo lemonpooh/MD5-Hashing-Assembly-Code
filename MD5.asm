@@ -40,12 +40,12 @@ TABLE_T dword  d76aa478h, e8c7b756h, 242070dbh, c1bdceeeh
         dword  0a679438eh, 049b40821h, 0f61e2562h, 0c040b340h, 0265e5a51h
         dword  0e9b6c7aah, 0d62f105dh, 002441453h, 0d8a1e681h, 0e7d3fbc8h
         dword  021e1cde6h, 0c33707d6h, 0f4d50d87h, 0455a14edh, 0a9e3e905h
-        dword  0fcefa3f8h, 0676f02d9h, 08d2a4c8ah, 0fffa3942h, 08771f681h
+        dword  0fcefa3f8h, 0676f02d9h, 8d2a4c8ah, fffa3942h, 08771f681h
         dword  06d9d6122h, 0fde5380ch, 0a4beea44h, 04bdecfa9h, 0f6bb4b60h
         dword  0bebfbc70h, 0289b7ec6h, 0eaa127fah, 0d4ef3085h, 004881d05h
-        dword  0d9d4d039h, 0e6db99e5h, 01fa27cf8h, 0c4ac5665h, 0f4292244h
-        dword  0432aff97h, 0ab9423a7h, 0fc93a039h, 0655b59c3h, 08f0ccc92h
-        dword  0ffeff47dh, 085845dd1h, 06fa87e4fh, 0fe2ce6e0h, 0a3014314h
+        dword  0d9d4d039h, 0e6db99e5h, 01fa27cf8h, c4ac5665h, 0f4292244h
+        dword  0432aff97h, 0ab9423a7h, 0fc93a039h, 655b59c3h, 08f0ccc92h
+        dword  ffeff47dh, 085845dd1h, 06fa87e4fh, 0fe2ce6e0h, 0a3014314h
         dword  04e0811a1h, 0f7537e82h, 0bd3af235h, 02ad7d2bbh, 0eb86d391h
 
 SHIFT_AMTS  dword  7,12,17,22, 7,12,17,22, 7,12,17,22, 7,12,17,22
